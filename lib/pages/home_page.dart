@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final TextEditingController _textEditingController =
-  TextEditingController(text: '1');
+      TextEditingController(text: '1');
   List<WaterConsume> waterConsumeList = [];
 
   @override
@@ -69,13 +69,12 @@ class _HomePageState extends State<HomePage> {
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
         decoration: const InputDecoration(
-          contentPadding:
-          EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+          contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
           labelText: "No of Glass",
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.green)),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.green)),
+          enabledBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
+          focusedBorder:
+              OutlineInputBorder(borderSide: BorderSide(color: Colors.green)),
         ),
       ),
     );
@@ -109,7 +108,7 @@ class _HomePageState extends State<HomePage> {
         child: ListView.builder(
             itemCount: waterConsumeList.length,
             itemBuilder: (context, index) {
-              return _buildSingleListItem(waterConsumeList[index], index+1);
+              return _buildSingleListItem(waterConsumeList[index], index + 1);
             }));
   }
 
@@ -129,7 +128,7 @@ class _HomePageState extends State<HomePage> {
   void _addWater() {
     int glassCount = int.tryParse(_textEditingController.text) ?? 1;
     WaterConsume waterConsume =
-    WaterConsume(time: DateTime.now(), glassCount: glassCount);
+        WaterConsume(time: DateTime.now(), glassCount: glassCount);
     waterConsumeList.add(waterConsume);
     setState(() {});
   }

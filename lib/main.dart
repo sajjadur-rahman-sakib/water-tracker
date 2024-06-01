@@ -16,18 +16,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       home: const HomePage(),
-
       theme: ThemeData(
-
           appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.green,
-              foregroundColor: Colors.white
-          )
-
-      ),
-
+              backgroundColor: Colors.green, foregroundColor: Colors.white)),
     );
   }
 }
